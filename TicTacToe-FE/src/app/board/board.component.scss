@@ -1,0 +1,90 @@
+.game-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+
+.board-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 600px;
+  height: 600px;
+  float: left;
+}
+
+.cell {
+  border: 1px solid grey;
+}
+
+.available:hover{
+    background-color:gainsboro;
+}
+
+.x-marked {
+  background-image: url('../../assets/cross.svg');
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.o-marked {
+  background-image: url('../../assets/circle.svg');
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.winner-cell{
+    background-color:blanchedalmond;
+}
+
+
+.reload-button {
+  margin-left: 40px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  background: url('../../assets/reload.svg') no-repeat top left;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 40px;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 30%;
+  background-color: azure;
+}
+.reload-button:hover{
+    background-color: cornflowerblue;
+}
+
+.player {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  font-size: 20px;
+}
+.name{
+    width: 200px;
+
+}
+.score {
+  width: 50px;
+}
+.sign {
+  width: 50px;
+}
+
+.with-o {
+  background-image: url('../../assets/circle.svg');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.with-x {
+  background-image: url('../../assets/cross.svg');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}

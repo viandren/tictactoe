@@ -1,0 +1,64 @@
+
+<div class="game-container">
+
+  <div class="scores-container">
+
+    <div class="player">
+      <span class="name">Player1</span>
+
+      <div class="score">
+
+        <span>{{scoreTable.player1}}</span>
+      </div>
+
+      <div class="sign" [ngClass]="activePlayer == 'o'? 'with-o' : 'with-x'">
+
+      </div>
+    </div>
+
+
+    <div class="player">
+      <span class="name">Computer</span>
+
+
+      <div class="score">
+
+        <span>{{scoreTable.player2}}</span>
+      </div>
+
+
+      <div class="sign" [ngClass]="activePlayer == 'x'? 'with-o' : 'with-x'">
+      </div>
+    </div>
+
+    <div class="player">
+      <span class="name">Draw</span>
+
+
+      <div class="score">
+
+        <span>{{scoreTable.draw}}</span>
+      </div>
+
+
+      <div class="sign">
+      </div>
+    </div>
+
+  </div>
+
+    <div class="board-container">
+      <ng-container *ngFor="let x of width">
+        <ng-container *ngFor="let y of width">
+          <div class="cell" (click)="onClick(x,y)" [ngClass]="getStyleClass(x,y)"></div>
+        </ng-container>
+      </ng-container>
+
+    </div>
+
+
+    <div>
+      <input type="button" class="reload-button" (click)="reload()">
+    </div>
+
+  </div>
